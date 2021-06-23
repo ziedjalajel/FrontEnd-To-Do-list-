@@ -1,6 +1,8 @@
 export const ADD_TASK = "ADD_TASK";
 export const DELETE_TASK = "DELETE_TASK";
 export const UPDATE_TASK = "UPDATE_TASK";
+export const FINISHED_TASK = "FINISHED_TASK";
+
 // export const FETCH_PRODUCTS = "FETCH_PRODUCTS ";
 
 // ACTIONS
@@ -24,7 +26,7 @@ export const updateTask = (updatedTask) => {
 // export const fetchProducts = async () => {
 //   return async (dispatch) => {
 //     try {
-//       const res = await axios.get("http://localhost:8000/products");
+//       const res = await axios.get("http://localhost:8080/tasks");
 //       console.log(res.data);
 //       dispatch({
 //         type: FETCH_PRODUCTS,
@@ -35,3 +37,6 @@ export const updateTask = (updatedTask) => {
 //     }
 //   };
 // };
+export const finisheTask = (finishedTask) => {
+  return { type: FINISHED_TASK, payload: { finishedTask: finishedTask } };
+};

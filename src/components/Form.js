@@ -67,6 +67,7 @@ const Form = () => {
           onChange={handleChange}
         />
       </div>
+
       <div class="input-group">
         <select
           class="form-select"
@@ -83,6 +84,7 @@ const Form = () => {
           <option value="Low">Low</option>
         </select>
       </div>
+      <br />
       <div class="input-group">
         <select
           class="form-select"
@@ -99,7 +101,9 @@ const Form = () => {
           <option value="Work">Work</option>
         </select>
       </div>
+      <br />
       <Calendar onChange={handleChangeDate} value={toDo.date} />
+      <br />
       <button type="submit" class="btn btn-outline-success">
         {updatedTask ? "Update" : "Submit"}
       </button>

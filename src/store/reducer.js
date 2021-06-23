@@ -3,6 +3,7 @@ import {
   DELETE_TASK,
   // FETCH_PRODUCTS,
   UPDATE_TASK,
+  FINISHED_TASK,
 } from "./actions";
 
 import tasksData from "../tasks";
@@ -57,6 +58,20 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         tasks: [newTask, ...state.tasks],
+      };
+    case FINISHED_TASK:
+      const doneTask = action.payload; // this is the same as newProduct = action.payload.newProduct
+      let finishTask = [...state.tasks];
+      doneTask.done.forEach((id) =>
+        finishTask.map((task) => {
+          if (task.id === id) {
+            task.done = true;
+          }
+        })
+      );
+      return {
+        ...state,
+        tasks: [doneTask, ...state.tasks],
       };
     default:
       return state;

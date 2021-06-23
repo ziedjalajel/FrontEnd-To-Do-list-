@@ -40,5 +40,15 @@ const tasks = [
     deadline: "",
     history: "future",
   },
+  {
+    id: 5,
+    task: "hayder",
+    slug: "sleep-again",
+    detail: "not neccessery",
+    date: new Date("2021-06-23"),
+    done: false,
+    deadline: "",
+    history: "future",
+  },
 ];
 export default tasks;

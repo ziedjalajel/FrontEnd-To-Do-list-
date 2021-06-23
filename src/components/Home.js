@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import FinishedTask from "./FinishedTask";
 import FutureList from "./FutureList";
 import TodayList from "./TodayList";
 const Home = () => {
@@ -13,6 +14,8 @@ const Home = () => {
       <TodayList />
       <h3>Not Today</h3>
       <FutureList />
+      <h3>Finished Tasks</h3>
+      <FinishedTask />
     </div>
   );
 };

@@ -9,7 +9,8 @@ const TodayList = (props) => {
       (task) =>
         task.date.getFullYear() === today.getFullYear() &&
         task.date.getMonth() === today.getMonth() &&
-        task.date.getDate() === today.getDate()
+        task.date.getDate() === today.getDate() &&
+        !(task.done === true)
     )
     .map((task) => <TaskItem task={task} key={task.id} />);
 

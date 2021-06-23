@@ -1,3 +1,17 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
+}
+.container {
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.btn-close {
+  justify-content: right;
+}
 /* body {
   background-color: #fbab7e;
   background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
