@@ -11,7 +11,7 @@ const TaskItem = (props) => {
   const task = props.task;
   return (
     <div>
-      {task.done ? (
+      {task.done || (task.done < new Date() && props.nottoday) ? (
         ""
       ) : (
         <div class="form-check">
