@@ -10,8 +10,9 @@ const TaskItem = (props) => {
   const dispatch = useDispatch();
   const task = props.task;
   return (
+    // || (task.done < new Date() && props.nottoday)
     <div>
-      {task.done || (task.done < new Date() && props.nottoday) ? (
+      {task.done ? (
         ""
       ) : (
         <div class="form-check">
