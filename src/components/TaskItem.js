@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { updateTask, deleteTask, finisheTask } from "../store/actions";
+import { deleteTask, finisheTask } from "../store/actions";
 import { Link } from "react-router-dom";
 
 const TaskItem = (props) => {
@@ -30,8 +30,7 @@ const TaskItem = (props) => {
       <p>Task Date :{task.date.toDateString()}</p>
       <p>Task :{task.task}</p>
       <p>Detail :{task.detail}</p>
-      <p>Priority :{task.priorty}</p>
-      <p>Deadline :{task.deadline}</p>
+      <p>Priority :{task.priority}</p>
       <p>Category :{task.category}</p>
 
       <Link to={`/form/${task.slug}/update`}>

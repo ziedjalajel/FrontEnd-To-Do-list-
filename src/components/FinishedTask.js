@@ -3,7 +3,7 @@ import TaskItem from "../components/TaskItem";
 
 const FinishedTask = (props) => {
   //   const finishedSelector = useSelector((state) => state.tasks);
-  const today = new Date();
+  // const today = new Date();
   const tasks = useSelector((state) => state.tasks);
   let finishTask = tasks
     .filter((task) => task.done)

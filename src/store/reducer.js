@@ -1,25 +1,25 @@
 import {
   ADD_TASK,
   DELETE_TASK,
-  // FETCH_PRODUCTS,
+  FETCH_TASK,
   UPDATE_TASK,
   FINISHED_TASK,
 } from "./actions";
 
-import tasksData from "../tasks";
-import slugify from "slugify";
+// import tasksData from "../tasks";
+// import slugify from "slugify";
 
 const initialState = {
-  tasks: tasksData,
+  tasks: [],
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    //   case FETCH_PRODUCTS:
-    //     return {
-    //       ...state,
-    //       products: action.payload,
-    //     };
+    case FETCH_TASK:
+      return {
+        ...state,
+        tasks: action.payload,
+      };
     case DELETE_TASK:
       return {
         ...state,
@@ -27,7 +27,7 @@ const reducer = (state = initialState, action) => {
       };
     case UPDATE_TASK:
       const { updatedTask } = action.payload;
-      updatedTask.slug = slugify(updatedTask.task);
+      // updatedTask.slug = slugify(updatedTask.task);
       return {
         ...state,
         tasks: state.tasks.map((task) =>
@@ -35,9 +35,9 @@ const reducer = (state = initialState, action) => {
         ),
       };
     case ADD_TASK:
-      const newTask = action.payload; // this is the same as newProduct = action.payload.newProduct
-      newTask.id = state.tasks[state.tasks.length - 1].id + 1;
-      newTask.slug = slugify(newTask.task);
+      const { newTask } = action.payload; // this is the same as newProduct = action.payload.newProduct
+      // newTask.id = state.tasks[state.tasks.length - 1].id + 1;
+      // newTask.slug = slugify(newTask.task);
 
       //   let todayTask = [...state.tasks];
       //   newTask.date.forEach((id) =>
@@ -61,14 +61,14 @@ const reducer = (state = initialState, action) => {
       };
     case FINISHED_TASK:
       const doneTask = action.payload; // this is the same as newProduct = action.payload.newProduct
-      let finishTask = [...state.tasks];
-      doneTask.done.forEach((id) =>
-        finishTask.map((task) => {
-          if (task.id === id) {
-            task.done = true;
-          }
-        })
-      );
+      // let finishTask = [...state.tasks];
+      // doneTask.done.forEach((id) =>
+      //   finishTask.map((task) => {
+      //     if (task.id === id) {
+      //       task.done = true;
+      //     }
+      //   })
+      // );
       return {
         ...state,
         tasks: [doneTask, ...state.tasks],

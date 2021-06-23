@@ -37,7 +37,7 @@ const Form = () => {
     history.push("/");
   };
   return (
-    <form className="container" onSubmit={handleSubmit}>
+    <form className="container" class="col-4" onSubmit={handleSubmit}>
       <h2>Add New Task</h2>
       <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1">
@@ -47,7 +47,7 @@ const Form = () => {
           type="text"
           class="form-control"
           placeholder="Enter A New Task"
-          class="col-4"
+          // class="col-4"
           name="task"
           value={toDo.task}
           onChange={handleChange}
@@ -61,7 +61,7 @@ const Form = () => {
           type="text"
           class="form-control"
           placeholder="Enter Task Details"
-          class="col-4"
+          // class="col-4"
           name="detail"
           value={toDo.detail}
           onChange={handleChange}
@@ -73,7 +73,7 @@ const Form = () => {
           class="form-select"
           id="inputGroupSelect04"
           aria-label="Example select with button addon"
-          class="col-4"
+          // class="col-4"
           name="priority"
           defaultValue={toDo.priority}
           onChange={handleChange}
@@ -90,7 +90,7 @@ const Form = () => {
           class="form-select"
           id="inputGroupSelect04"
           aria-label="Example select with button addon"
-          class="col-4"
+          // class="col-4"
           name="category"
           defaultValue={toDo.category}
           onChange={handleChange}
