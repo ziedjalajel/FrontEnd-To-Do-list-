@@ -13,7 +13,7 @@ const FutureList = () => {
           task.date.getDate() === today.getDate()
         ) && task.done === false
     )
-    .map((task) => <TaskItem task={task} key={task.id} />);
+    .map((task) => <TaskItem nottoday={true} task={task} key={task.id} />);
 
   return <div>{futureTask}</div>;
 };
